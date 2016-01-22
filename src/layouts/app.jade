@@ -1,4 +1,10 @@
 extends ./default.jade
 
 block content
-  h1= title
+  .bounds
+    img.app-thumb(src=thumb width="100" height="100")
+    h1.app-title= title
+    .app-author
+      | by 
+      a(href=developer_link)= developer
+    p.app-description= post

@@ -7,10 +7,11 @@
     "build": "node build_data.js",
     "deploy": "git subtree push --prefix _site origin gh-pages",
     "clean": "rm -rf _site/*",
-    "watch": "watch 'npm run build' ./src",
+    "watch": "watch 'DEV=\"true\" npm run build' ./src",
     "browser-sync": "browser-sync start --server _site --files _site",
-    "start": "npm run watch & npm run browser-sync",
-    "test": "npm run clean && npm run build"
+    "start": "npm run watch & npm run browser-sync & npm run stylus",
+    "test": "npm run clean && npm run build && stylus ./src/css/app_showcase.styl -o ./_site/app_showcase.css",
+    "stylus": "stylus --watch ./src/css/app_showcase.styl -o ./_site/app_showcase.css"
   },
   "repository": {
     "type": "git",

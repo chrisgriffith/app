@@ -1,10 +1,10 @@
---- 
+---
 developer_link: http://sworkit.com
-thumb: /uploads/app/2013-03/2013-03-06-sworkit-pro.png
+thumb: http://a3.mzstatic.com/us/r30/Purple69/v4/5b/0d/29/5b0d29a9-1c02-d8cd-b103-c22bd84a5745/icon175x175.jpeg
 permalink: /app/sworkit-pro
 android_link: https://play.google.com/store/apps/details?id=sworkitproapp.sworkit.com
 email: ryan@sworkit.com
-devices: 
+devices:
 - ios
 - android
 date: 2013-03-06 18:56:02.435320 +00:00
@@ -18,6 +18,6 @@ status: publish
 ---
 
 Awesome Randomized Circuit Training Workouts that keep you motivated to exercise and stay fit. Choose the part of body to workout and for how long. Sworkit creates the perfect workout anywhere, anytime. No weights or extra equipment required.
-4.5+ Stars. First time app developer. Listed in Apple's in the Featured Health & Fitness, Get in Shape section. 
+4.5+ Stars. First time app developer. Listed in Apple's in the Featured Health & Fitness, Get in Shape section.
 Press: Lifehacker.com | Gizmodo.com | Greatist.com | Brit.co | Addictivetips.com
 Plugins: LowLatency, Video, Google Anlaytics, Kiip Rewards..

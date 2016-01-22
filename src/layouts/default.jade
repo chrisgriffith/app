@@ -11,6 +11,10 @@ html(lang='en')
         try{Typekit.load();}catch(e){}
       script(src="http://phonegap.github.io/scripts/home.js")
       script(src="http://phonegap.github.io/scripts/mobile_nav.js")
+    if dev
+      base(href="/")
+    else 
+      base(href="/app/")
     block styles
       link(href='/styles/zenburn-highlight.css', rel='stylesheet')
       link(href='/styles/normalize.css', rel='stylesheet')

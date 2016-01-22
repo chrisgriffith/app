@@ -65,6 +65,14 @@ var appFn = jade.compileFile('./src/layouts/app.jade');
 var appPaginateFn = jade.compileFile('./src/layouts/app-paginate.jade');
 
 var _finishedParsingFiles = function () {
+  dataArray.sort(function(a,b){
+    if (a.date < b.date)
+      return -1;
+    else if (a.date > b.date)
+      return 1;
+    else
+      return 0;
+  })
   dataArray.forEach(_writeAppPage);
 
   var appsPerPage = 30;

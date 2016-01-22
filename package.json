@@ -10,7 +10,8 @@
     "watch": "watch 'npm run build' ./src",
     "browser-sync": "browser-sync start --server _site --files _site",
     "start": "npm run watch & npm run browser-sync",
-    "test": "npm run clean && npm run build"
+    "test": "npm run clean && npm run build",
+    "stylus": "stylus < ./src/css/app_showcase.styl > ./_site/app_showcase.css"
   },
   "repository": {
     "type": "git",

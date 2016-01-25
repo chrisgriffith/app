@@ -11,6 +11,7 @@
     "browser-sync": "browser-sync start --server _site --files _site",
     "start": "npm run watch & npm run browser-sync & npm run stylus",
     "test": "npm run clean && npm run build && stylus ./src/css/app_showcase.styl -o ./_site/app_showcase.css",
+    "build:images": "imagemin ./uploads ./_site/uploads",
     "stylus": "stylus --watch ./src/css/app_showcase.styl -o ./_site/app_showcase.css"
   },
   "repository": {
@@ -30,6 +31,7 @@
     "autoprefixer": "^6.1.2",
     "browser-sync": "^2.11.1",
     "escape-html": "^1.0.3",
+    "imagemin-cli": "^2.0.0",
     "jade": "^1.11.0",
     "mkdirp": "^0.5.1",
     "stylus": "^0.53.0",

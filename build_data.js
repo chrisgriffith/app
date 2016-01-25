@@ -66,10 +66,12 @@ var appPaginateFn = jade.compileFile('./src/layouts/app-paginate.jade');
 
 var _finishedParsingFiles = function () {
   dataArray.sort(function(a,b){
-    if (a.date < b.date)
-      return -1;
-    else if (a.date > b.date)
+    var a_date = new Date(a.date);
+    var b_date = new Date(b.date);
+    if (a_date < b_date)
       return 1;
+    else if (a_date > b_date)
+      return -1;
     else
       return 0;
   })

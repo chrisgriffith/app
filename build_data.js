@@ -3,16 +3,22 @@ var YAML = require('yamljs');
 var escape = require('escape-html');
 var jade = require('jade');
 var mkdirp = require('mkdirp');
+var recursive = require('recursive-readdir');
+var filesystem = require("fs");
+var path = require('path');
 
 var _getAllFilesFromFolder = function(dir) {
-    var filesystem = require("fs");
     var results = [];
     fs.readdirSync(dir).forEach(function(file) {
         file = dir+'/'+file;
         var stat = fs.statSync(file);
         if (stat && stat.isDirectory()) {
             results = results.concat(_getAllFilesFromFolder(file))
-        } else results.push(file);
+        } else {
+          if(path.extname(file) == '.md') {
+            results.push(file)
+          }
+        };
     });
     return results;
 };

@@ -1,5 +1,30 @@
 extends ./default.jade
 
+if(itunes_id)
+  append scripts
+    script.
+      document.addEventListener("DOMContentLoaded", function(event) { 
+        var request = new XMLHttpRequest();
+        request.open('GET', 'https://itunes.apple.com/lookup?id=#{itunes_id}', true);
+
+        request.onload = function() {
+          if (request.status >= 200 && request.status < 400) {
+            // Success!
+            var data = JSON.parse(request.responseText);
+            console.log(data)
+          } else {
+            console.error('there was a problem');
+          }
+        };
+
+        request.onerror = function() {
+          // There was a connection error of some sort
+          console.error('there was a problem');
+        };
+
+        request.send();
+      });
+
 block content
   .bounds
     img.app-thumb(src=thumb width="100" height="100")

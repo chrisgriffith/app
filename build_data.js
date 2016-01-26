@@ -4,7 +4,7 @@ var escape = require('escape-html');
 var jade = require('jade');
 var mkdirp = require('mkdirp');
 var recursive = require('recursive-readdir');
-var filesystem = require("fs");
+var fs = require('graceful-fs');
 var path = require('path');
 
 var _getAllFilesFromFolder = function(dir) {

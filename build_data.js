@@ -3,7 +3,6 @@ var YAML = require('yamljs');
 var escape = require('escape-html');
 var jade = require('jade');
 var mkdirp = require('mkdirp');
-var recursive = require('recursive-readdir');
 var fs = require('graceful-fs');
 var path = require('path');
 

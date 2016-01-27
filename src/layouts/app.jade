@@ -9,7 +9,14 @@ if(itunes_id)
           .url('https://itunes.apple.com/lookup?id=#{itunes_id}')
           .type('jsonp')
           .on('success', function(data){
-              console.log(data);
+              var screenshotUrls = data.results[0].screenshotUrls;
+              var screenshotsDiv = document.getElementById('screenshots');
+              screenshotUrls.forEach(function(screenshotUrl){
+                var image = document.createElement("img");
+                image.src = screenshotUrl;
+                screenshotsDiv.appendChild(image);
+              });
+              
           })
           .go();
       });
@@ -23,3 +30,4 @@ block content
       a(href=developer_link)= developer
       span= date
     p.app-description= post
+    #screenshots
